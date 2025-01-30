@@ -21,9 +21,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: |
-        chmod +x ./main.sh
-        ./main.sh
+    - run: ${{ github.action_path }}/main.sh
       shell: bash
       env:
         CLIENT_ID: ${{ inputs.client_id }}
