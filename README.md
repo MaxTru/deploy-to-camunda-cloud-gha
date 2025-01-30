@@ -4,7 +4,7 @@ A simple GitHub Action to deploy to Camunda 8 SaaS.
 
 ## Compatibility
 
-This action is compatible with [Camunda 8.6+ SaaS](https://docs.camunda.io/docs/guides/).
+This action is compatible with [Camunda 8.6+ SaaS](https://docs.camunda.io/docs/guides/). It is using the [`deployments` API](https://docs.camunda.io/docs/apis-tools/camunda-api-rest/specifications/deploy-resources/).
 
 It is currently not set-up for self-managed deployments (but that can be easily added if needed).
 
