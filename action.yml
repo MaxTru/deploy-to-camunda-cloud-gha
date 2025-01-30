@@ -1,0 +1,33 @@
+name: 'Deploy to Camunda Cloud SaaS'
+description: 'A simple GitHub action to deploy resources (e.g., BPMNs, DMNs) to Camunda SaaS'
+author: 'MaxTru'
+inputs:
+  client_id:
+    description: 'Camunda Client ID'
+    required: true
+  client_secret:
+    description: 'Camunda Client Secret'
+    required: true
+  region:
+    description: 'Camunda Cluster Region'
+    required: true
+  cluster_id:
+    description: 'Camunda Cluster ID'
+    required: true
+  files:
+    description: 'Comma-separated list of file paths to deploy'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - run: |
+        chmod +x main.sh
+        ./main.sh
+      shell: bash
+      env:
+        CLIENT_ID: ${{ inputs.client_id }}
+        CLIENT_SECRET: ${{ inputs.client_secret }}
+        REGION: ${{ inputs.region }}
+        CLUSTER_ID: ${{ inputs.cluster_id }}
+        FILES: ${{ inputs.files }}
