@@ -22,7 +22,7 @@ runs:
   using: 'composite'
   steps:
     - run: |
-        chmod +x main.sh
+        chmod +x ./main.sh
         ./main.sh
       shell: bash
       env:
