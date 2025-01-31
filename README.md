@@ -32,7 +32,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to Camunda Cloud
-        uses: MaxTru/deploy-to-camunda-cloud-gha@v0.1.3
+        uses: MaxTru/deploy-to-camunda-cloud-gha@v1.0.0
         with:
           client_id: ${{ secrets.CLIENT_ID }}
           client_secret: ${{ secrets.CLIENT_SECRET }}
